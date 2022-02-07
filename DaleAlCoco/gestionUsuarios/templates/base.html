@@ -1,0 +1,46 @@
+<html>
+
+<head>
+
+    {% load static %}
+
+    <link href="{% static 'WebApp/css/styles.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+  
+  <header id="cabecera">
+    <h1 class="titulo">DALE AL COCO</h1>
+  </header>
+
+
+  <!-- Navbar -->
+
+  <header id="cabecera2">
+      <h3>
+        <nav class = "barra">
+          <ul class="list">
+              <li>
+                <a class="linkmenu" href="{% url 'login' %}">INICIA SESION</a>
+              </li>
+              <li>
+                <a class="linkmenu" href="{% url 'register' %}">REGISTRATE</a>
+              </li>
+          </ul>
+        </nav>
+    </h3>
+
+  </header>
+
+  {% block content %}
+
+
+
+  {% endblock %}
+
+
+</body>
+
+
+</html>

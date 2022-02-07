@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+
+        <title> REGISTRO </title>
+        
+
+        <link href="{% static 'WebApp/css/styles.css' %}" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <section class = "form-register">
+            <form action ="/index/" method = "post">{% csrf_token %}
+                <h1> REGISTRATE </h1>
+                <input class= "box" type="text" name = "nombre" placeholder="Nombre de usuario">
+                <input class= "box" type="password" name = "password" placeholder="Pasword">
+                <input class= "box" type="password" name = "password2" placeholder="Repite Pasword">
+                <input class= "box" type="text" name = "email" placeholder="Email">
+                <p><input class= "button" type="submit" value= "Aceptar">
+                <input class= "button" type="submit" value= "Cancelar"></p>
+        
+            </form>
+        </section>
+    </body>
+</html>
